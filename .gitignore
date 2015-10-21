@@ -1,0 +1,5 @@
+__pycache__
+.DS_Store
+
+# хуй вам, а не скрипт run, в нём ключ
+run.sh

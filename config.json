@@ -1,0 +1,65 @@
+{
+  "commands": [
+    {
+      "pattern": "/uuu",
+      "help": "/uuu - печатает uuu",
+      "type": "text",
+      "actions": [
+        "l = _len(msg, 'у+') + int(chance(3))*100;",
+        "result = wrap_t('УУУУУУУУУУУ' + 'УУ'*l)"
+      ]
+    },
+    {
+      "pattern": "/aaa",
+      "help": "/aaa - AAAAAAAAAAAAAA",
+      "type": "text",
+      "actions": [
+        "l = _len(msg, 'a+', 'а+') + int(chance(3))*100;",
+        "result = wrap_t('AAAAAAAAAAAAAA' + 'AA'*l)"
+      ]
+    },
+    {
+      "pattern": "/ooo",
+      "help": "/ooo - OOOOOOOOOOOOOO",
+      "type": "text",
+      "actions": [
+        "l = _len(msg, 'o+', 'о+') + int(chance(3))*100;",
+        "result = wrap_t('OOOOOOOOOOOOOO' + 'OO'*l)"]
+    },
+    {
+      "pattern": "/money",
+      "help": "/money - ГДЕ МОИ ДЕНЬГИ, ЙОПТА",
+      "type": "text",
+      "actions": ["result = wrap_t('ГДЕ МОИ ДЕНЬГИ, ЙОПТА')"]
+    },
+    {
+      "pattern": "/azaza",
+      "help": "/azaza - АЗАЗАЗАЗАЗАЗАА",
+      "type": "text",
+      "actions": [
+        "l =  _len(msg, 'a+', 'а+') + int(chance(1))*100;",
+        "l += _len(msg, 'з+', 'z+') + int(chance(1))*100;",
+        "result = wrap_t('АЗАЗАЗАЗА' + 'ЗА'*l)"]
+    },
+    {
+      "pattern": "/voice",
+      "help": "/voice - просто орёт голосом",
+      "type": "voice",
+      "actions": ["result = wrap_v(open('data/sound.ogg', 'rb'))"]
+    }
+  ],
+
+  "scream": {
+    "screams": [
+      "СУКА ГДЕ ШЛЯЛСЯ ОПЯТЬ ПО БАБАМ ГУЛЯЛ", "ВСЮ ЖИЗНЬ МНЕ ИСПОРТИЛ",
+      "ВСМЫСЛЕ БЛЯТЬ ТЫ НА КОГО ТУТ ГОНИШЬ", "ВАН ЕРИКОВ ВАН ЛАВ"
+    ],
+    "probability": 10,
+
+    "triggers": [
+      {"patterns": ["лол"], "probability": 100, "answer": "ПОЛЛОЛИРУЙ МНЕ ТУТ ЕЩЁ"},
+      {"patterns": ["хуй", "пизда", "мудак", "пидр"], "probability": 100, "answer": ""},
+      {"patterns": ["*"], "probability": 2, "answer": "МАТЬ ПРИДИ ДРАКОНОВ ЗАВЕДИ"}
+    ]
+  }
+}
